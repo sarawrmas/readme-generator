@@ -71,19 +71,14 @@ const questions = [
         }
     },
     {
-        type: 'confirm',
-        name: 'confirmInstallation',
-        message: 'Would you like to include instructions for installation?',
-        default: false
-    },
-    {
         type: 'input',
         name: 'installation',
-        message: 'Describe installation instructions here:',
-        when: ({ confirmInstallation }) => {
-            if (confirmInstallation) {
+        message: 'What are the instructions for installation?',
+        validate: installationInput => {
+            if (installationInput) {
                 return true;
             } else {
+                console.log('Please provide instructions for installation to ensure users have the proper software to run your program!');
                 return false;
             }
         }
@@ -103,13 +98,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'screenshot',
+        name: 'image',
         message: "Link to a screenshot of the project:",
-        validate: screenshotInput => {
-            if (screenshotInput) {
+        validate: imageInput => {
+            if (imageInput) {
                 return true;
             } else {
-                console.log('Please enter a link to your screenshot so that users can see a preview of your project!');
+                console.log('Please enter a link to your image so that users can preview your project!');
                 return false;
             }
         }
@@ -128,19 +123,14 @@ const questions = [
         }
     },
     {
-        type: 'confirm',
-        name: 'confirmTests',
-        message: 'Did you write any tests for your application?',
-        default: false
-    },
-    {
         type: 'input',
         name: 'tests',
         message: 'Describe the tests written for your application and how to use them:',
-        when: ({ confirmTests }) => {
-            if (confirmTests) {
+        validate: testsInput => {
+            if (testsInput) {
                 return true;
             } else {
+                console.log('Please provide instructions on how others can contribute to your project.');
                 return false;
             }
         }
@@ -155,7 +145,7 @@ const questions = [
         type: 'list',
         name: 'licenses',
         message: 'What license would you like to include?',
-        choices: ['MIT', 'GPL', 'CC-0'],
+        choices: ['MIT', 'GPL', 'CC--0'],
         when: ({ confirmLicenses }) => {
             if (confirmLicenses) {
                 return true;

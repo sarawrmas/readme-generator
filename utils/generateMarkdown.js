@@ -1,5 +1,6 @@
 const fs = require('fs');
-// TODO: Create a function that returns a license badge based on which license is passed in
+
+// Returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
@@ -9,7 +10,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// Returns the license link
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return `https://lbesson.mit-license.org/`
@@ -17,19 +18,28 @@ function renderLicenseLink(license) {
   if (license === 'GPL') {
     return `http://perso.crans.org/besson/LICENSE.html`
   }
-  if (license === 'CC-0') {
+  if (license === 'CC--0') {
     return `https://creativecommons.org/licenses/by-nd/4.0` 
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (!license) {
+    license = "";
+  } else {
+    return `## Licenses
+    This project is covered under the ${license} license. To learn more about what this means, click [here]${renderLicenseLink(license)}.`
+  }
+}
 
-// TODO: Create a function to generate markdown for README
+// Generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
   ${renderLicenseBadge(data.licenses)}
+
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -43,20 +53,20 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  // ## Installation
-  // ${data.installation}
+  ## Installation
+  ${data.installation}
 
   ## Usage
-  ${data.usage}
+  ${data.usage}  
+  ![Screenshot](${data.image})
 
-  // ## Licenses
-  // ${data.licenses}
+  ${renderLicenseSection(data.licenses)}
 
   ## Contributing
   ${data.contributing}
 
-  // ## Tests
-  // ${data.tests}
+  ## Tests
+  ${data.tests}
 
   ## Questions
   Have questions about this project?  

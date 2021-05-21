@@ -4,7 +4,7 @@ const fs = require('fs');
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (!license) {
-    license = "";
+    return ``;
   } else {
     return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
   }
@@ -27,10 +27,10 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (!license) {
-    license = "";
+    return ``;
   } else {
     return `## Licenses
-    This project is covered under the ${license} license. To learn more about what this means, click [here]${renderLicenseLink(license)}.`
+    This project is covered under the ${license} license. To learn more about what this means, click the license button at the top.`
   }
 }
 
@@ -58,7 +58,7 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}  
-  ![Screenshot](${data.image})
+  ![Screenshot](${data.image}?raw=true)
 
   ${renderLicenseSection(data.licenses)}
 
@@ -70,8 +70,7 @@ function generateMarkdown(data) {
 
   ## Questions
   Have questions about this project?  
-  Contact:  
-  https://github.com/${data.github}  
+  GitHub: https://github.com/${data.github}  
   Email: ${data.email}
 
   ## Credits

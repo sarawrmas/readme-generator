@@ -1,86 +1,82 @@
-# README.md Generator
+# README Generator
 
-## Project Description: Questions to Consider
-* What is the app for?
-* What was your motivation?
-* Why did you build this project?
-* What problem does it solve?
-* What did you learn?
-* What makes your project stand out?
+## Navigate To:
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Guidelines](#guidelines)
+* [Demonstration](#demonstration)
+* [Questions](#questions)
+* [Credits](#credits)
 
-# User Story
-~~AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project~~
+## Description 
 
-# Acceptance Criteria
-~~GIVEN a command-line application that accepts user input~~
+Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README file.
 
-~~WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions~~
+The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
 
-~~WHEN I enter my project title
-THEN this is displayed as the title of the README~~
+There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all.
 
-~~WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests~~
+With this README generator, you no longer need to create a professional README from scratch. Simply answer a few questions and watch as a README is created before your very eyes.
 
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+## Installation
 
-~~WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile~~
+### Before attempting to use this project, make sure to have these programs installed on your computer:  
+* VS Code  
+* GitBash  
+* Node.js  
 
-~~WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions~~
+### Steps to initialize the project:  
+1. **Copy Link:** Hit the "Code" button within this GitHub repo to copy link
+1. **Clone:** Within GitBash, use the command "git clone *paste link here*"
+1. **NPM:** Use the command "npm init -y" to install Node Package Manager
+1. **Inquirer:** Use the command "npm install inquirer" to get npm's inquirer package
 
-~~WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README~~
+## Usage
+Once software is downloaded and Node packages are initialized, it's time to get started!
 
-## Licenses
-MIT License
+Within the directory for this project, initialize prompts using the command "node index.js".
 
-Copyright (c) 2021, Sara Adamski
+From there, simply enter the necessary information for your project, and voila! A new README file will be generated and placed into the 'dist' folder.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Not sure what to input for a certain section? Follow the guidelines outlined below.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Guidelines
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+* **Description: Questions to Consider**
+    * What is the app for?
+    * What was your motivation?
+    * Why did you build this project?
+    * What problem does it solve?
+    * What did you learn?
+    * What makes your project stand out?
 
-# Header
-## Smaller Header
-* unordered li
-* unordered li
-1. ordered li
-1. ordered li
+* **Installation:** What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-**bold**
+* **Usage:** Provide instructions and examples for use. Include screenshots as needed.
 
-__bold__
+* **Licenses:** This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
 
-*italic*
+* **Contributing:** If you created an application or package and would like other developers to contribute to it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
 
-_italic_
+* **Tests:** Go the extra mile and write tests for your application, then provide examples on how to run them.
 
-~~Strikethrough~~
+* **Questions:** Include your GitHub profile and email so users can reach out to you with any questions about your project.
 
-Link: [link](link.com)
+* **Credits:** 
+    * List your collaborators, if any, with links to their GitHub profiles. Don't forget to include your own name!
+    * If you used any third-party assets that require attribution, list the creators with links to their primary web presence.
+    * If you followed tutorials, include links to those here as well.
 
-Image: ![Alt Text](url)
+## Demonstration
+Watch this demo to see the README Generator in action:
+![Demo](link.com)
 
-> Blockquotes
+## Questions
 
-**Double enter to enter new line**
+Have any questions about this project?  
+GitHub: https://github.com/sarawrmas  
+Email: sara.m.adamski@gmail.com
+
+## Credits
+Sara Adamski

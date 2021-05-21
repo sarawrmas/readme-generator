@@ -5,13 +5,22 @@ function renderLicenseBadge(license) {
   if (!license) {
     license = "";
   } else {
-    return `![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)`
+    return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
   }
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'MIT') {
+    return `https://lbesson.mit-license.org/`
+  }
+  if (license === 'GPL') {
+    return `http://perso.crans.org/besson/LICENSE.html`
+  }
+  if (license === 'CC-0') {
+    return `https://creativecommons.org/licenses/by-nd/4.0` 
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string

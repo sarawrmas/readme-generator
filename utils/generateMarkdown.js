@@ -57,8 +57,9 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ## Usage
-  ${data.usage}  
-  ![Screenshot](${data.image}?raw=true)
+  ${data.usage}
+
+  ![Screenshot](../assets/images/screenshot.png)
 
   ${renderLicenseSection(data.licenses)}
 

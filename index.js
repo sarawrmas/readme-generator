@@ -98,19 +98,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'image',
-        message: "Link to a screenshot of the project:",
-        validate: imageInput => {
-            if (imageInput) {
-                return true;
-            } else {
-                console.log('Please enter a link to your image so that users can preview your project!');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
         name: 'contributing',
         message: 'How can others contribute to this project?',
         validate: contributionInput => {

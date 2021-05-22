@@ -59,8 +59,6 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ![Screenshot](../assets/images/screenshot.png)
-
   ${renderLicenseSection(data.licenses)}
 
   ## Contributing

@@ -65,7 +65,7 @@ const questions = [
             if (descriptionInput) {
                 return true;
             } else {
-                console.log('It is essential to provide a description of your project. Not sure what to include? Head to the repo of this README generator and navigate to the section "Project Description: Questions to Consider" for some guidelines on writing a quality description.');
+                console.log('It is essential to provide a description of your project. Not sure what to include? Head to the repo of this README generator and navigate to the section "Description: Questions to Consider" under the Guidelines header for some tips on writing a quality description.');
                 return false;
             }
         }
